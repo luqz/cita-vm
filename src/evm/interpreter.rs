@@ -194,6 +194,10 @@ impl Interpreter {
         }
     }
 
+    pub fn add_log(&mut self, log: Log) {
+        self.logs.push(log);
+    }
+
     #[allow(clippy::cognitive_complexity)]
     pub fn run(&mut self) -> Result<InterpreterResult, err::Error> {
         let mut pc = 0;
